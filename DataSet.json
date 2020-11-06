@@ -8,11 +8,11 @@
     },
 
     "Sweets": {
-        "name": "Sweets",
+        "name": "Ice-Cream",
         "type": "Food",
         "history": "Since I was little",
-        "reason": "I've been addicted to sweets since I was little. There is no reason, just my body wants.",
-        "avatar": "sweets.jpg"
+        "reason": "Ice-cream make my blain clear, my heart warm, and my mouth refresh!",
+        "avatar": "icecream.jpg"
     },
 
     "Coffee": {

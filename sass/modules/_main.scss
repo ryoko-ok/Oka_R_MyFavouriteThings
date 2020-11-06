@@ -8,15 +8,66 @@ body {
     border: 0;
 }
 
-.box {
-    width: 30px;
-    height: 30px;
-    background-color: #ffd5d5;
 
+h1 {
+	font-size: 34px;
+	line-height: 45px;
+	letter-spacing: 1px;
+	opacity: 80%;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	text-align: center;
 }
 
-.box2 { 
-    width: 30px;
-    height: 30px;
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
 
+h3 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 10px 0 5px 0;
+}
+
+p {
+	line-height: 24px;
+	margin-bottom: 2px;
+}
+
+a:link, a:visited { 
+	color: white;
+ 	text-decoration: blink; 
+ 	font-weight: bold;
+ 	padding: 5px;
+}
+
+a:hover, a:active { 
+	color: white;
+	text-decoration: blink; 
+	font-weight: bold;
+	padding: 5px;
+}
+
+
+.hidden {
+	display: none;
+}
+
+.box {
+    background-color: #ffd5d5;
+	color: #45454d;
+	text-align: center;
+	margin: 20px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 480px;
+	background-color: white;
 }
