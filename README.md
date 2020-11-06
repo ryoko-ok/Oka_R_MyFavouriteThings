@@ -10,7 +10,7 @@ When you click the item, you will see the details.
 
 ## Contributing
 
-1. Create base fundation such as folders and files.
+1. Create base foundation such as folders and files.
 2. Create layout.
 3. Add SASS contents and create JS
 4. Create JavaScript
