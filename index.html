@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Things!</title>
+
+    <!-- linking with css -->
+    <link rel="stylesheet" href="css/master.css">
+
+</head>
+
+<body>
+    <main id="app">
+        <h1 class="hidden">My Favourite Things</h1>
+
+        <!-- this is an HTML component -->
+
+        <div class="box"></div>
+
+        <!-- add favourite things -->
+        <section class="favourite-section">
+        </section>
+        <!-- end users section -->
+
+    </main>
+    
+    <footer>this is a simple footer</footer>
+
+
+    <!-- template files here (these don't render - the contents are reusable and get cloned at runtime) -->
+    <template id="favourite-template">
+        <div class="favourite">
+            <img src="" alt="favourite img">
+            <h2 class="favourite-name"></h2>
+            <p class="favourite-type"></p>
+            <p class="favourite-history"></p>
+            <p class="favourite-reason"></p>
+        </div>
+    </template>
+    <!-- end templates -->
+    
+    <!-- linking with javascript -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
