@@ -1,6 +1,5 @@
 .favourite-section {
     display: flex;
-    width: 980px;
 	padding: 20px 20px 0 20px;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -8,7 +7,7 @@
 
 .favourite { 
     flex: 1;
-    width: 470px;
+    width: 300px;
 	border-right: solid 1px #ccc;
 	margin-bottom: 30px;
 	padding: 0 20px 20px 0;
