@@ -19,7 +19,7 @@ export default {
         name: "Coffee",
         type: "Drink",
         history: "Since I was 19",
-        reason: "When I realized coffee and chocolate are best friend, I fail love with coffee. When I study, coffee is a good supporter, when I go to a cafe, coffee is a good friend.",
+        reason: "When I realized that coffee and chocolate are best friend, I fall in love with coffee. When I study, coffee is a good supporter, when I go to a cafe, coffee is a good friend.",
         avatar: "coffee.jpg"
     }
 

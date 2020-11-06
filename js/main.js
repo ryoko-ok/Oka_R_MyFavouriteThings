@@ -23,11 +23,11 @@
             let currentFavourite = favouriteTemplate.cloneNode(true),
                 currentFavouriteText = currentFavourite.querySelector('.favourite').children;
 
-            currentFavouriteText[1].src = `images/${data[favourite].avatar}`;
-            currentFavouriteText[2].textContent = data[favourite].name;
-            currentFavouriteText[3].textContent = data[favourite].type;
-            currentFavouriteText[4].textContent = data[favourite].history;
-            currentFavouriteText[5].textContent = data[favourite].reason;
+            currentFavouriteText[1].src = `images/${data[favourite].Avatar}`;
+            currentFavouriteText[2].textContent = data[favourite].Name;
+            currentFavouriteText[3].textContent = data[favourite].Type;
+            currentFavouriteText[4].textContent = data[favourite].History;
+            currentFavouriteText[5].textContent = data[favourite].Reason;
 
             // add this new user to the view
             favouriteSection.appendChild(currentFavourite);
