@@ -1,25 +1,21 @@
-(() => {
-    // start with a Fetch all
-    fetch('./includes/functions.php')
-        .then(res => res.json()) // parse the JSON (translate) back to plain JS
-        .then(data => {
-            // this is our data (DataSet.json)
-            // converted to a plain JavaScript object
-            handleDataSet(data);
-        })
-    .catch((error) => console.log(error));
+// import your packages here
+import { fetchData } from "./modules/TheDataMiner.js";
 
+(() => {
+    // stub * just a place for non-component-specific stuff
+    console.log('loaded');
+    
+    function popErrorBox(message) {
+        alert("Something has gone horribly, horribly wrong");
+    }
 
     // this receives the data payload from our AJAX request, parses it (turns the returned JSON object back into a plain JavaScript object) and renders the data to our view (the markup in index.html)
     function handleDataSet(data) {
         let favouriteSection = document.querySelector('.favourite-section'),
             favouriteTemplate = document.querySelector('#favourite-template').content;
 
-        debugger;
-
-        // loop through the JavaScript object and for each user, make a copy of the user template we find at the bottom of index.html, populate it with the user's data, and put that fresh copy in the users section in index.html
-
         for (let favourite in data) {
+            debugger;
             let currentFavourite = favouriteTemplate.cloneNode(true),
                 currentFavouriteText = currentFavourite.querySelector('.favourite').children;
 
@@ -34,4 +30,32 @@
         }
     }
 
+
+    function retrieveProjectInfo() {
+        // test for an ID
+        // check for an id, and if there isn't one, then don't try the fetch call
+        // because it'll break (the PHP will choke)
+        if (!event.target.id) { return }
+
+        fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => console.log(err));
+    }
+
+    function renderPortfolioThumbnails(thumbs) {
+        let favouriteSection = document.querySelector('.favourite-section'),
+            favouriteTemplate = document.querySelector('#favourite-template').content;
+
+        for (let favourite in thumbs) {
+            let currentFavourite = favouriteTemplate.cloneNode(true),
+                currentFavouriteText = currentFavourite.querySelector('.favourite').children;
+
+            currentFavouriteText[1].src = `images/${thumbs[favourite].Avatar}`;
+            currentFavouriteText[1].id = thumbs[favourite].ID;
+            // add this new user to the view
+            favouriteSection.appendChild(currentFavourite);
+        }
+
+        favouriteSection.addEventListener("click", retrieveProjectInfo);
+    }
+        
+    fetchData("./includes/index.php").then(data => renderPortfolioThumbnails(data[0])).catch(err => console.log(err));
 })();
