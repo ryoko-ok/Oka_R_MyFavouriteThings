@@ -2,61 +2,51 @@
 import { fetchData } from "./modules/TheDataMiner.js";
 
 (() => {
-    // stub * just a place for non-component-specific stuff
-    console.log('loaded');
-    
-    function popErrorBox(message) {
-        alert("Something has gone horribly, horribly wrong");
-    }
-
     // this receives the data payload from our AJAX request, parses it (turns the returned JSON object back into a plain JavaScript object) and renders the data to our view (the markup in index.html)
     function handleDataSet(data) {
-        let favouriteSection = document.querySelector('.favourite-section'),
-            favouriteTemplate = document.querySelector('#favourite-template').content;
-
-        for (let favourite in data) {
+        let favSection = document.querySelector('.fav-section'),
+            favTemplate = document.querySelector('#fav-template').content;
             debugger;
-            let currentFavourite = favouriteTemplate.cloneNode(true),
-                currentFavouriteText = currentFavourite.querySelector('.favourite').children;
 
-            currentFavouriteText[1].src = `images/${data[favourite].Avatar}`;
-            currentFavouriteText[2].textContent = data[favourite].Name;
-            currentFavouriteText[3].textContent = data[favourite].Type;
-            currentFavouriteText[4].textContent = data[favourite].History;
-            currentFavouriteText[5].textContent = data[favourite].Reason;
+        for (let fav in data) { //"in" or "of"
+            let currentFav = favTemplate.cloneNode(true),
+                currentFavText = currentFav.querySelector('.fav').children;
+
+            currentFavText[1].src = `images/${data[fav].avatar}`;
+            currentFavText[2].textContent = data[fav].name;
+            currentFavText[3].textContent = data[fav].type;
+            currentFavText[4].textContent = data[fav].history;
+            currentFavText[5].textContent = data[fav].reason;
 
             // add this new user to the view
-            favouriteSection.appendChild(currentFavourite);
+            favSection.appendChild(currentFav);
         }
     }
 
     // Click function 
     
     function retrieveProjectInfo() {
-        // test for an ID
-        // check for an id, and if there isn't one, then don't try the fetch call
-        // because it'll break (the PHP will choke)
-        if (!event.target.id) { return }
-
-        fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => console.log(err));
+        debugger;
+        console.log(this.id);
+        fetchData(`./includes/index.php?id=${this.id}`).then(data => console.log(data)).catch(err => console.log(error));
     }
 
     function renderPortfolioThumbnails(thumbs) {
-        let favouriteSection = document.querySelector('.favourite-section'),
-            favouriteTemplate = document.querySelector('#favourite-template').content;
+        let favSection = document.querySelector('.fav-section'),
+            favTemplate = document.querySelector('#fav-template').content;
 
-        for (let favourite in thumbs) {
-            let currentFavourite = favouriteTemplate.cloneNode(true),
-                currentFavouriteText = currentFavourite.querySelector('.favourite').children;
+        for (let fav in thumbs) {
+            let currentFav = favTemplate.cloneNode(true),
+                currentFavText = currentFav.querySelector('.fav').children;
 
-            currentFavouriteText[1].src = `images/${thumbs[favourite].Avatar}`;
-            currentFavouriteText[1].id = thumbs[favourite].ID;
+            currentFavText[1].src = `images/${thumbs[fav].avatar}`;
+            currentFavText[1].id = thumbs[fav].id;
             // add this new user to the view
-            favouriteSection.appendChild(currentFavourite);
-        }
 
-        favouriteSection.addEventListener("click", retrieveProjectInfo);
+            currentFav.addEventListener("click", retrieveProjectInfo);
+            favSection.appendChild(currentFav);
+        }
     }
         
-    fetchData("./includes/index.php").then(data => renderPortfolioThumbnails(data[0])).catch(err => console.log(err));
+    fetchData("./includes/index.php").then(data => renderPortfolioThumbnails(data)).catch(error => console.log(error));
 })();

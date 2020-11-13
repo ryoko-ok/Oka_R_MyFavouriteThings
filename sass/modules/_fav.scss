@@ -1,0 +1,23 @@
+.fav-section {
+    display: flex;
+	padding: 50px 20px 0 20px;
+	flex-direction: row;
+	justify-content: flex-start;
+	text-align: center;
+}
+
+.fav { 
+    flex: 1;
+	margin-bottom: 30px;
+	padding: 0 20px 20px 0;
+
+    .fav-name, .fav-type, .fav-history, .fav-reason { 
+		margin: 0; 
+	}
+
+	img {
+		width: 150px;
+		border-radius: 50%;
+	}
+
+}

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favourite Things</title>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+        
+
     <!-- this has to be a css file -->
     <link rel="stylesheet" href="css/master.css">
 </head>
@@ -19,7 +24,7 @@
     <main id="app">
 
         <!-- add a users section here -->
-        <section class="favourite-section">
+        <section class="fav-section">
                 <!-- user-template copies get rendered here -->
         </section>
         <!-- end users section -->
@@ -28,14 +33,14 @@
     <footer>this is a simple footer</footer>
 
     <!-- template files here (these don't render - the contents are reusable and get cloned at runtime) -->
-    <template id="favourite-template">
-        <div class="favourite">
+    <template id="fav-template">
+        <div class="fav">
             <h2 class="hidden">three things I love</h2>
-            <img src="" alt="favourite img">
-            <h3 class="favourite-name"></h3>
-            <p class="favourite-type"></p>
-            <p class="favourite-history"></p>
-            <p class="favourite-reason"></p>
+            <img src="" alt="fav_img">
+            <h3 class="fav_name"></h3>
+            <p class="fav_type"></p>
+            <p class="fav_history"></p>
+            <p class="fav_reason"></p>
         </div>
     </template>
     <!-- end templates -->

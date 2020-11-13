@@ -1,15 +1,10 @@
-.hidden {
-  display: none;
-}
-
 @media screen and (max-width: 480px) {
   body {
     background-color: purple;
   }
 }
-header {
-  background-color: #fc7fb2;
-  color: white;
+.hidden {
+  display: none;
 }
 
 body {
@@ -25,11 +20,11 @@ body {
 }
 
 h1 {
-  font-size: 34px;
-  line-height: 45px;
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  line-height: 90px;
   letter-spacing: 1px;
-  opacity: 80%;
-  color: white;
+  color: #fc7fb2;
   border-radius: 10px;
   margin-bottom: 20px;
   font-weight: bold;
@@ -82,23 +77,29 @@ a:hover, a:active {
   background-color: white;
 }
 
-.favourite-section {
+header {
+  padding: 20px;
+}
+
+.fav-section {
   display: flex;
-  padding: 20px 20px 0 20px;
+  padding: 50px 20px 0 20px;
   flex-direction: row;
   justify-content: flex-start;
   text-align: center;
 }
 
-.favourite {
+.fav {
   flex: 1;
-  width: 300px;
-  border-right: solid 1px #ccc;
   margin-bottom: 30px;
   padding: 0 20px 20px 0;
 }
-.favourite .favourite-name, .favourite .favourite-type, .favourite .favourite-history, .favourite .favourite-reason {
+.fav .fav-name, .fav .fav-type, .fav .fav-history, .fav .fav-reason {
   margin: 0;
+}
+.fav img {
+  width: 150px;
+  border-radius: 50%;
 }
 
 footer {
