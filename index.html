@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favourite Things!</title>
+    <title>My Favourite Things</title>
 
-    <!-- linking with css -->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+        
+
+    <!-- this has to be a css file -->
     <link rel="stylesheet" href="css/master.css">
-
 </head>
 
 <body>
+    <header>
+        <div>
+        <h1>My Favourite Things</h1>
+        </div>
+    </header>       
     <main id="app">
-        <h1 class="hidden">My Favourite Things</h1>
 
-        <!-- this is an HTML component -->
-
-        <div class="box"></div>
-
-        <!-- add favourite things -->
-        <section class="favourite-section">
+        <!-- add a users section here -->
+        <section class="fav-section">
+                <!-- user-template copies get rendered here -->
         </section>
         <!-- end users section -->
-
     </main>
-    
+
     <footer>this is a simple footer</footer>
 
-
     <!-- template files here (these don't render - the contents are reusable and get cloned at runtime) -->
-    <template id="favourite-template">
-        <div class="favourite">
-            <img src="" alt="favourite img">
-            <h2 class="favourite-name"></h2>
-            <p class="favourite-type"></p>
-            <p class="favourite-history"></p>
-            <p class="favourite-reason"></p>
+    <template id="fav-template">
+        <div class="fav">
+            <h2 class="hidden">three things I love</h2>
+            <img src="" alt="fav_img">
+            <h3 class="fav_name"></h3>
+            <p class="fav_type"></p>
+            <p class="fav_history"></p>
+            <p class="fav_reason"></p>
         </div>
     </template>
     <!-- end templates -->
-    
-    <!-- linking with javascript -->
+
+    <!-- script files always go here -->
     <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

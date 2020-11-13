@@ -1,16 +1,4 @@
-nav { 
-    margin: 0;
+header {
+    padding: 20px;
+} 
 
-    .nav-item { 
-        display: inline-block; margin: 0 10px;
-
-        background-color: #fc7fb2;
-
-        a { 
-            cursor: pointer; text-decoration: none; color: #45454d;
-
-            &:hover { color: #ffd5d5; }
-        }
-    }
-
-}

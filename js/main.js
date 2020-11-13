@@ -1,37 +1,52 @@
+// import your packages here
+import { fetchData } from "./modules/TheDataMiner.js";
+
 (() => {
-    // start with a Fetch all
-    fetch('./includes/functions.php')
-        .then(res => res.json()) // parse the JSON (translate) back to plain JS
-        .then(data => {
-            // this is our data (DataSet.json)
-            // converted to a plain JavaScript object
-            handleDataSet(data);
-        })
-    .catch((error) => console.log(error));
-
-
     // this receives the data payload from our AJAX request, parses it (turns the returned JSON object back into a plain JavaScript object) and renders the data to our view (the markup in index.html)
     function handleDataSet(data) {
-        let favouriteSection = document.querySelector('.favourite-section'),
-            favouriteTemplate = document.querySelector('#favourite-template').content;
+        let favSection = document.querySelector('.fav-section'),
+            favTemplate = document.querySelector('#fav-template').content;
+            debugger;
 
-        debugger;
+        for (let fav in data) { //"in" or "of"
+            let currentFav = favTemplate.cloneNode(true),
+                currentFavText = currentFav.querySelector('.fav').children;
 
-        // loop through the JavaScript object and for each user, make a copy of the user template we find at the bottom of index.html, populate it with the user's data, and put that fresh copy in the users section in index.html
-
-        for (let favourite in data) {
-            let currentFavourite = favouriteTemplate.cloneNode(true),
-                currentFavouriteText = currentFavourite.querySelector('.favourite').children;
-
-            currentFavouriteText[1].src = `images/${data[favourite].Avatar}`;
-            currentFavouriteText[2].textContent = data[favourite].Name;
-            currentFavouriteText[3].textContent = data[favourite].Type;
-            currentFavouriteText[4].textContent = data[favourite].History;
-            currentFavouriteText[5].textContent = data[favourite].Reason;
+            currentFavText[1].src = `images/${data[fav].avatar}`;
+            currentFavText[2].textContent = data[fav].name;
+            currentFavText[3].textContent = data[fav].type;
+            currentFavText[4].textContent = data[fav].history;
+            currentFavText[5].textContent = data[fav].reason;
 
             // add this new user to the view
-            favouriteSection.appendChild(currentFavourite);
+            favSection.appendChild(currentFav);
         }
     }
 
+    // Click function 
+    
+    function retrieveProjectInfo() {
+        debugger;
+        console.log(this.id);
+        fetchData(`./includes/index.php?id=${this.id}`).then(data => console.log(data)).catch(err => console.log(error));
+    }
+
+    function renderPortfolioThumbnails(thumbs) {
+        let favSection = document.querySelector('.fav-section'),
+            favTemplate = document.querySelector('#fav-template').content;
+
+        for (let fav in thumbs) {
+            let currentFav = favTemplate.cloneNode(true),
+                currentFavText = currentFav.querySelector('.fav').children;
+
+            currentFavText[1].src = `images/${thumbs[fav].avatar}`;
+            currentFavText[1].id = thumbs[fav].id;
+            // add this new user to the view
+
+            currentFav.addEventListener("click", retrieveProjectInfo);
+            favSection.appendChild(currentFav);
+        }
+    }
+        
+    fetchData("./includes/index.php").then(data => renderPortfolioThumbnails(data)).catch(error => console.log(error));
 })();

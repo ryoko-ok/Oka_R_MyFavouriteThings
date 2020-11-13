@@ -1,17 +1,33 @@
 <?php
-// include the file we just wrote - connect
-include("connect.php"); // like a JS import statement
+    // include the file we just wrote - connect
+     // like a JS import statement
 
-// link with myphpadmin database
-$query = "SELECT * FROM tbl_favouriteThings";
+    $result = array();
 
-$runQuery = $pdo->query($query);
+    function getAllUsers($conn)
+    {
+        $query = "SELECT * FROM tbl_favouriteThings";
 
-$result = array();
+        $runQuery = $conn->query($query);
 
-while($row = $runQuery->fetch(PDO::FETCH_ASSOC)) {
-    $result[] = $row;
-}
+        while ($row = $runQuery->fetchAll(PDO::FETCH_ASSOC)) {
+            $result[] = $row;
+        }
 
-// return $result;
-echo(json_encode($result));
+        //return $result;
+        echo(json_encode($result));
+    }
+
+    function getSingleUser($conn, $id)
+    {
+        $query = "SELECT * FROM tbl_favouriteThings WHERE id=" . $id . "";
+
+        $runQuery = $conn->query($query);
+
+        while ($row = $runQuery->fetchAll(PDO::FETCH_ASSOC)) {
+            $result[] = $row;
+        }
+
+        //return $result;
+        echo(json_encode($result));
+    }
