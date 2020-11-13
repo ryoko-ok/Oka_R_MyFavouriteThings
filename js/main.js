@@ -30,7 +30,8 @@ import { fetchData } from "./modules/TheDataMiner.js";
         }
     }
 
-
+    // Click function 
+    
     function retrieveProjectInfo() {
         // test for an ID
         // check for an id, and if there isn't one, then don't try the fetch call

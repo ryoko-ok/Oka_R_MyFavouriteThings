@@ -1,10 +1,9 @@
 footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	margin-top: 20px;
-	padding: 0 20px;
-    background-color: #45454d;
+    position: fixed;
+    bottom: 0;
+    background-color: gray;
+    width: 100%;
+    text-align: center;
+    
     color: white;
 }
-

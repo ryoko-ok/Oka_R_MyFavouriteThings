@@ -1,26 +1,6 @@
 {
-    "Cats": {
-        "name": "Cats",
-        "type": "Animal",
-        "history": "Since I was born",
-        "reason": "Even just I see them, I feel happiness and relax. They are fluffy, soft, and extremely cute.",
-        "avatar": "cats.jpg"
-    },
+    "Cats": { "name":"Cats","type":"Animal","history":"Since I was born","reason":"Even just I see them, I feel happiness and relax. They are fluffy, soft, and extremely cute.","avatar":"oscar.jpg"},
+    "Sweets": {"name": "Ice-Cream","type": "Food","history": "Since I was little","reason": "Ice-cream make my blain clear, my heart warm, and my mouth refresh!","avatar": "icecream.jpg"},
+    "Coffee": {"name": "Coffee","type": "Drink","history": "Since I was 19","reason": "When I realized coffee and chocolate are best friend, I fail love with coffee. When I study, coffee is a good supporter, when I go to a cafe, coffee is a good friend.","avatar": "coffee.jpg"}
 
-    "Sweets": {
-        "name": "Ice-Cream",
-        "type": "Food",
-        "history": "Since I was little",
-        "reason": "Ice-cream make my blain clear, my heart warm, and my mouth refresh!",
-        "avatar": "icecream.jpg"
-    },
-
-    "Coffee": {
-        "name": "Coffee",
-        "type": "Drink",
-        "history": "Since I was 19",
-        "reason": "When I realized coffee and chocolate are best friend, I fail love with coffee. When I study, coffee is a good supporter, when I go to a cafe, coffee is a good friend.",
-        "avatar": "coffee.jpg"
-    }
-
-}
+ }
