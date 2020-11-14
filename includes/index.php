@@ -4,7 +4,7 @@
 
     if (isset($_GET["id"])) {
         $targetID = $_GET["id"];
-        $result = getSingleUser($pdo, $targetID);
+        $result = getAllUser($pdo, $targetID);
 
         return $result;
     } else {
