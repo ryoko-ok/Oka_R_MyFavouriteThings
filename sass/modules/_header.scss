@@ -26,6 +26,15 @@ header {
         border: none;
         color: white;
     }
+
+    a:link, a:visited {
+        color: gray;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+      }
 }
 
 p {
