@@ -46,15 +46,6 @@ import { fetchData } from "./modules/TheDataMiner.js";
             currentFav.addEventListener("click", retrieveProjectInfo);
             favSection.appendChild(currentFav);
 
-            // function retrieveProjectInfo(){
-            //     currentFavText[3].textContent = data[fav].type;
-            //     currentFavText[4].textContent = data[fav].history;
-            //     currentFavText[5].textContent = data[fav].reason;    
-            // }
-
-            currentFav.getElementById(".fav-name").addEventListener("click", function(){ 
-            currentFav.getElementById(".fav-section").innerText = ".fav-section"; 
-            }); 
         }
     }
         
