@@ -1,15 +1,42 @@
+.fav-container {
+	height: 100vh;
+	text-align: center;
+
+	h2 {
+		color:  #fc7fb2;
+		font-size: 40px;
+		opacity: 80%;
+		font-family: 'Raleway@500', sans-serif;
+		padding: 30px;
+	}
+
+	p {
+		color: gray;
+	}
+}
+
 .fav-section {
     display: flex;
 	padding: 50px 20px 0 20px;
-	flex-direction: row;
-	justify-content: flex-start;
+	flex-direction: column;
 	text-align: center;
+	height: 100vh;
+
 }
+
 
 .fav { 
     flex: 1;
 	margin-bottom: 30px;
 	padding: 0 20px 20px 0;
+	color: gray;
+	cursor: pointer;
+
+    &:hover { 
+        opacity: 60%;
+        border: none;
+        color: #fc7fb2;
+    }
 
     .fav-name, .fav-type, .fav-history, .fav-reason { 
 		margin: 0; 
@@ -18,6 +45,7 @@
 	img {
 		width: 150px;
 		border-radius: 50%;
+		cursor: pointer;
 	}
 
 }
