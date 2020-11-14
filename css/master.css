@@ -36,6 +36,7 @@ h2 {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 5px;
+  color: gray;
 }
 
 h3 {
@@ -150,6 +151,45 @@ footer {
   background-color: gray;
   width: 100%;
   text-align: center;
+  color: white;
+}
+
+.err {
+  text-align: center;
+  color: gray;
+  background-color: white;
+  padding: 50px;
+  height: 100vh;
+}
+.err h2 {
+  font-size: 40px;
+  padding: 30px;
+}
+
+.errbutton {
+  padding: 10px 20px;
+  margin: 40px;
+  border: none;
+  font-size: 18px;
+  display: inline-block;
+  border: gray 1px solid;
+  border-radius: 10px;
+  color: gray;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+}
+.errbutton:hover {
+  background-color: gray;
+  opacity: 60%;
+  border: none;
+  color: white;
+}
+.errbutton a:link, .errbutton a:visited {
+  color: gray;
+  text-decoration: none;
+}
+.errbutton a:link:hover, .errbutton a:visited:hover {
   color: white;
 }
 
