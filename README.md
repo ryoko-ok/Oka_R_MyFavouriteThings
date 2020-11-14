@@ -4,8 +4,11 @@ This is my three favourit things. I will show you what are my favourits and why.
 
 ## Installation
 
-First, you see my three favourit things.
-When you click the item, you will see the details.
+1. First, you see my three favourit things main page
+2. Click "Read More"
+3. Move to Favourite things page automatically
+4. You will see icons
+5. When you click the item, you will see the details
 
 
 ## Contributing
@@ -15,10 +18,7 @@ When you click the item, you will see the details.
 3. Add SASS contents and create JS
 4. Create JavaScript
 5. Connect PHP
-6. Submit a pull request
 
-## History
-Nov.7 Submission Date
 
 ## Credits
 
@@ -26,4 +26,4 @@ Ryoko Oka
 
 ## License
 
-Licensed by MIT
+MIT
