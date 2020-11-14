@@ -1,3 +1,22 @@
-@media screen and (max-width: 480px) {
-    body { background-color:purple; }
+@media (min-width: 768px) {
+    .fav-section {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+    }
+
+    .container {
+        width: 600px;
+    }    
+
+    p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .fav-section {
+        flex-wrap: wrap;
+        }
 }

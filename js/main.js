@@ -8,7 +8,7 @@ import { fetchData } from "./modules/TheDataMiner.js";
             favTemplate = document.querySelector('#fav-template').content;
             debugger;
 
-        for (let fav in data) { //"in" or "of"
+        for (let fav in data) { //"in" or "of" 
             let currentFav = favTemplate.cloneNode(true),
                 currentFavText = currentFav.querySelector('.fav').children;
 
@@ -22,8 +22,6 @@ import { fetchData } from "./modules/TheDataMiner.js";
             favSection.appendChild(currentFav);
         }
     }
-
-    // Click function 
     
     function retrieveProjectInfo() {
         debugger;
@@ -41,6 +39,8 @@ import { fetchData } from "./modules/TheDataMiner.js";
 
             currentFavText[1].src = `images/${thumbs[fav].avatar}`;
             currentFavText[1].id = thumbs[fav].id;
+            currentFavText[2].textContent = thumbs[fav].name;
+
             // add this new user to the view
 
             currentFav.addEventListener("click", retrieveProjectInfo);

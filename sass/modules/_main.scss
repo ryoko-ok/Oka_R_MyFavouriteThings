@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
     font: $main-font;
     font-size: $main-font-size;
@@ -38,35 +43,14 @@ h3 {
 }
 
 p {
-	line-height: 24px;
+	font-size: 14px;
+	line-height: 18px;
 	margin-bottom: 2px;
-}
-
-a:link, a:visited { 
-	color: white;
- 	text-decoration: blink; 
- 	font-weight: bold;
- 	padding: 5px;
-}
-
-a:hover, a:active { 
-	color: white;
-	text-decoration: blink; 
-	font-weight: bold;
-	padding: 5px;
-}
-
-
-
-.box {
-    background-color: #ffd5d5;
-	color: #45454d;
-	text-align: center;
-	margin: 20px;
 }
 
 .container {
 	margin: 0 auto;
 	width: 480px;
-	background-color: white;
+	text-align: center;
+	color: gray;
 }
