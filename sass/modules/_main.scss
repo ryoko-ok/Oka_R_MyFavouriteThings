@@ -17,35 +17,40 @@ body {
 
 h1 {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 900;
-	font-size: 50px;
-	line-height: 70px;
-    color: white;
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 60px;
+	color: white;
+	opacity: 90%;
 	text-align: center;
 }
 
 h2 {
-	font-size: 60px;
 	font-family: 'Raleway', sans-serif;
-	font-weight: 500;
+	font-weight: 900;
+	font-size: 35px;
 	margin: 10px;
 	color: #fc7fb2;
+	opacity: 80%;
 }
 
 h3 {
-	font-size: 24px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
 	line-height: 30px;
-	font-weight: bold;
-	color: #fc7fb2;
+	color: gray;
 	opacity: 70%;
 	margin: 10px 0 5px 0;
 }
 
 p {
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 18px;
+	line-height: 30px;
 	margin-bottom: 2px;
+	color: gray;
 }
+
 
 .container {
 	margin: 0 auto;
