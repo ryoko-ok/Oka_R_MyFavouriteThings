@@ -39,7 +39,6 @@
 
     .fav-name, .fav-type, .fav-history, .fav-reason { 
 		margin: 0; 
-
 	}
 
 	img {
@@ -47,5 +46,24 @@
 		border-radius: 50%;
 		cursor: pointer;
 	}
+}
+#lightbox {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 300px;
+	height: 450px;
+	display: none;
 
+	.active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	img {
+		max-width: 70%;
+		padding: 10px;
+		border-radius: 50%;
+	}
 }
