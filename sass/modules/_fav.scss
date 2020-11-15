@@ -1,12 +1,14 @@
 .fav-container {
 	height: 100vh;
 	text-align: center;
+	background-color: #fff1e9;
 
 	h2 {
 		color:  #fc7fb2;
 		font-size: 40px;
 		opacity: 80%;
-		font-family: 'Raleway@500', sans-serif;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 500;
 		padding: 30px;
 	}
 
@@ -20,10 +22,7 @@
 	padding: 50px 20px 0 20px;
 	flex-direction: column;
 	text-align: center;
-	height: 100vh;
-
 }
-
 
 .fav { 
     flex: 1;
