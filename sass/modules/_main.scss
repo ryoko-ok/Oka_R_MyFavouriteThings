@@ -6,7 +6,6 @@
 body {
     font: $main-font;
     font-size: $main-font-size;
-
     background-color: $main-bg-color;
 
     margin: 0; 
@@ -18,28 +17,27 @@ body {
 
 h1 {
 	font-family: 'Raleway', sans-serif;
-	font-size: 60px;
-	line-height: 90px;
-	letter-spacing: 1px;
-    color: #fc7fb2;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	font-weight: bold;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 70px;
+    color: white;
 	text-align: center;
 }
 
 h2 {
-	font-size: 24px;
-	font-weight: bold;
-	margin-top: 10px;
-	margin-bottom: 5px;
-	color: gray;
+	font-size: 60px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	margin: 10px;
+	color: #fc7fb2;
 }
 
 h3 {
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 24px;
+	line-height: 30px;
 	font-weight: bold;
+	color: #fc7fb2;
+	opacity: 70%;
 	margin: 10px 0 5px 0;
 }
 

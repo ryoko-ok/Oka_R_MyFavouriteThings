@@ -21,28 +21,27 @@ body {
 
 h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 60px;
-  line-height: 90px;
-  letter-spacing: 1px;
-  color: #fc7fb2;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 70px;
+  color: white;
   text-align: center;
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  color: gray;
+  font-size: 60px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  margin: 10px;
+  color: #fc7fb2;
 }
 
 h3 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 30px;
   font-weight: bold;
+  color: #fc7fb2;
+  opacity: 70%;
   margin: 10px 0 5px 0;
 }
 
@@ -57,6 +56,39 @@ p {
   width: 480px;
   text-align: center;
   color: gray;
+}
+
+.splash {
+  position: fixed;
+  height: 100vh;
+  background: gray;
+  color: white;
+  z-index: 200;
+  text-align: center;
+  line-height: 90vh;
+}
+
+.splash.display-none {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  z-index: -10;
+  text-align: center;
+  line-height: 90vh;
+  transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.fede-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 header {
@@ -104,12 +136,14 @@ p {
 .fav-container {
   height: 100vh;
   text-align: center;
+  background-color: #fff1e9;
 }
 .fav-container h2 {
   color: #fc7fb2;
   font-size: 40px;
   opacity: 80%;
-  font-family: "Raleway@500", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
   padding: 30px;
 }
 .fav-container p {
@@ -121,7 +155,6 @@ p {
   padding: 50px 20px 0 20px;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
 }
 
 .fav {
@@ -213,42 +246,6 @@ footer {
   .fav-section {
     flex-wrap: wrap;
   }
-}
-.splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #fc7fb2;
-  color: white;
-  z-index: 200;
-  text-align: center;
-  line-height: 90vh;
-}
-
-.splash.display-none {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #fc7fb2;
-  color: white;
-  z-index: -10;
-  text-align: center;
-  line-height: 90vh;
-  transition: all 0.5s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.fede-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
 }
 
 /*# sourceMappingURL=master.css.map */
