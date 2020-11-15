@@ -21,7 +21,7 @@ body {
 
 h1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 40px;
   line-height: 60px;
   color: white;
@@ -79,16 +79,27 @@ p {
   transition: all 0.2s;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.fede-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out;
+.move {
+  animation: move 1s;
+  -webkit-animation: move 5s;
 }
 
+@keyframes move {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 100%;
+  }
+}
+@-webkit-keyframes move {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 100%;
+  }
+}
 header {
   height: 100vh;
   background-color: #fff1e9;
@@ -128,11 +139,22 @@ header {
 }
 .fav-container h2 {
   color: #fc7fb2;
-  font-size: 40px;
   opacity: 80%;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   padding: 30px;
+}
+.fav-container h3 {
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.fav-container h3:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #fc7fb2;
+  opacity: 60%;
+  border: none;
 }
 .fav-container p {
   color: gray;
@@ -152,18 +174,20 @@ header {
   color: gray;
   cursor: pointer;
 }
-.fav:hover {
-  opacity: 60%;
-  border: none;
-  color: #fc7fb2;
-}
-.fav .fav-name, .fav .fav-type, .fav .fav-history, .fav .fav-reason {
+.fav .fav-name, .fav .fav-history, .fav .fav-reason {
   margin: 0;
+}
+.fav .fav-type {
+  text-decoration: underline;
 }
 .fav img {
   width: 150px;
   border-radius: 50%;
   cursor: pointer;
+}
+.fav img:hover {
+  opacity: 60%;
+  border: none;
 }
 
 #lightbox {
@@ -268,7 +292,7 @@ footer {
   }
 
   h1 {
-    font-size: 55px;
+    font-size: 60px;
     line-height: 70px;
   }
 
