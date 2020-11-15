@@ -5,11 +5,25 @@
 
 	h2 {
 		color:  #fc7fb2;
-		font-size: 40px;
 		opacity: 80%;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 500;
 		padding: 30px;
+	}
+
+	h3 {
+		transition: .3s;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  
+		&:hover { 
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);		  
+			color:  #fc7fb2;
+			opacity: 60%;
+			border: none;
+		}
+
 	}
 
 	p {
@@ -31,20 +45,25 @@
 	color: gray;
 	cursor: pointer;
 
-    &:hover { 
-        opacity: 60%;
-		border: none;
-		color: #fc7fb2;
-    }
 
-    .fav-name, .fav-type, .fav-history, .fav-reason { 
+    .fav-name, .fav-history, .fav-reason { 
 		margin: 0; 
+	}
+
+	.fav-type {
+		text-decoration: underline;
 	}
 
 	img {
 		width: 150px;
 		border-radius: 50%;
 		cursor: pointer;
+
+		&:hover { 
+			opacity: 60%;
+			border: none;
+		}
+	
 	}
 }
 #lightbox {
