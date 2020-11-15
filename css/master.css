@@ -22,17 +22,17 @@ body {
 h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 50px;
-  line-height: 70px;
+  font-size: 45px;
+  line-height: 60px;
   color: white;
   opacity: 90%;
   text-align: center;
 }
 
 h2 {
-  font-size: 60px;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  font-size: 35px;
   margin: 10px;
   color: #fc7fb2;
   opacity: 80%;
@@ -41,17 +41,18 @@ h2 {
 h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
-  color: #fc7fb2;
+  color: gray;
   opacity: 70%;
   margin: 10px 0 5px 0;
 }
 
 p {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 30px;
   margin-bottom: 2px;
+  color: gray;
 }
 
 .container {
@@ -103,7 +104,7 @@ header {
   padding: 10px 20px;
   margin: 40px;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   display: inline-block;
   border: gray 1px solid;
   border-radius: 10px;
@@ -120,12 +121,6 @@ header {
 }
 .readbutton a:link, .readbutton a:visited {
   text-decoration: none;
-}
-
-p {
-  font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 2px;
 }
 
 .fav-container {
@@ -228,6 +223,19 @@ footer {
     flex-direction: row;
   }
 
+  h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
   .container {
     width: 600px;
   }
@@ -240,6 +248,20 @@ footer {
 @media (min-width: 1024px) {
   .fav-section {
     flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 65px;
+    line-height: 70px;
+  }
+
+  h2 {
+    font-size: 55px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 32px;
   }
 }
 
