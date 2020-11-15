@@ -21,25 +21,28 @@ body {
 
 h1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 50px;
   line-height: 70px;
   color: white;
+  opacity: 90%;
   text-align: center;
 }
 
 h2 {
   font-size: 60px;
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
+  font-weight: 900;
   margin: 10px;
   color: #fc7fb2;
+  opacity: 80%;
 }
 
 h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
   color: #fc7fb2;
   opacity: 70%;
   margin: 10px 0 5px 0;
@@ -60,25 +63,21 @@ p {
 
 .splash {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
-  background: gray;
+  background: #fc7fb2;
   color: white;
   z-index: 200;
   text-align: center;
   line-height: 90vh;
 }
 
-.splash.display-none {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  color: white;
+.display-none {
+  opacity: 0;
   z-index: -10;
-  text-align: center;
-  line-height: 90vh;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 @keyframes fadeIn {
@@ -88,7 +87,7 @@ p {
 }
 .fede-in {
   opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
+  animation: fadeIn 1s ease-in-out;
 }
 
 header {
@@ -120,11 +119,7 @@ header {
   color: white;
 }
 .readbutton a:link, .readbutton a:visited {
-  color: gray;
   text-decoration: none;
-}
-.readbutton a:link:hover, .readbutton a:visited:hover {
-  color: white;
 }
 
 p {
