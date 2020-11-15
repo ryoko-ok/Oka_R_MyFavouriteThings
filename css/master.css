@@ -71,8 +71,6 @@ p {
   background: #fc7fb2;
   color: white;
   z-index: 200;
-  text-align: center;
-  line-height: 90vh;
 }
 
 .display-none {
